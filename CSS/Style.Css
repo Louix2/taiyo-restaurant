@@ -1,0 +1,470 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #333;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 6em auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+    height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #ff0000;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #333;
+    z-index: 1;
+}
+
+header .header-logo {
+    position: absolute;
+    left: 0;
+    width: 96px;
+    height: auto;
+}
+
+nav {
+    font-size: 1em;
+    grid-area: nav;
+    background: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #FFD700;
+    color: #333;
+}
+
+main {
+    grid-area: main;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.25em; 
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.weihnachtsbild-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.weihnachtsbild {
+    max-width: 17%;
+    height: auto;
+    margin-right: 11em;
+}
+
+#text p {
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-right: 0;
+}
+
+.Getränkebild-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Getränkebild {
+    max-width: 22%;
+    height: auto;
+    margin-right: 11em;
+}
+
+#Gtext p {
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1em;
+    margin-right: 0;
+}
+
+h2 a {
+    text-decoration: underline;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+h2 a:hover {
+    color: #ff0000;
+}
+#Öffnungszeiten h2 {
+    font-size: 2.2em;
+}
+#Öffnungszeiten table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#Öffnungszeiten table td {
+    font-size: 1.1em;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+#Öffnungszeiten table tr:last-child td {
+    border-bottom: none;
+}
+
+#menu h2{
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#menu .menu-table {
+    width: 70%;
+    margin:0 auto;
+    border-collapse: collapse;
+}
+
+#menu .menu-table th, #menu .menu-table td {
+    font-size: 1em;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#menu .menu-table th {
+    background-color: #a13d2f;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#menu .menu-table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+#menu h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#Getränke h2{
+    font-size: 2.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#Getränke .menu-table {
+    text-align: left;
+    width: 70%;
+    margin:0 auto;
+    border-collapse: collapse;
+}
+
+#Getränke .menu-table th, #Getränke .menu-table td {
+    font-size: 1em;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ffffff;
+}
+
+#Getränke .menu-table th {
+    background-color: #a13d2f;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#Getränke .menu-table tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+#Getränke h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+#events {
+    display: grid;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+#events h2 {
+    font-size: 2.2em;
+}
+
+#hanami a{
+	font-weight:bold;
+	text-decoration:none;
+	color:black;
+	text-decoration:underline;
+}
+
+#hanami a:hover{
+	color: #ff0000;
+}
+
+#weihnachten, #hanami, #tsukimi, #shogatsu {
+    text-align: left;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+#weihnachten ul, #hanami ul, #tsukimi ul, #shogatsu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#weihnachten ul li, #hanami ul li, #tsukimi ul li, #shogatsu ul li {
+    margin-bottom: 10px;
+}
+
+#weihnachten h3, #hanami h3, #tsukimi h3, #shogatsu h3 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#weihnachten p, #hanami p, #tsukimi p, #shogatsu p {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#spezials{
+    text-align: left;   
+    width: 50%;         
+    margin: 0 auto;
+}
+
+#spezials h2{
+    font-size:2.2em;
+    text-align: center;
+}
+
+.page-section {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer {
+    grid-area: footer;
+    background: #333;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    position: relative; 
+    padding: 10px 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer h3 {
+    position: absolute;
+    right: 20px;
+    margin: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #FFD700;
+}
+
+#reservation-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+#reservation-form h2 {
+    text-align: center;
+    color: #222;
+}
+
+#reservation-form .form-group {
+    margin-bottom: 15px;
+}
+
+#reservation-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#reservation-form input[type="date"]#date,
+#reservation-form input[type="text"]#name,
+#reservation-form input[type="email"]#email,
+#reservation-form input[type="number"]#persons {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#reservation-form input[type="date"]:focus,
+#reservation-form input[type="text"]:focus,
+#reservation-form input[type="email"]:focus,
+#reservation-form input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+#reservation-form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#reservation-form button:hover {
+    background-color: #45a049;
+}
+
+#success-message {
+    color: #4CAF50;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        font-size: 1em;
+        padding: 15px;
+        flex-direction: column;
+    }
+
+    .weihnachtsbild-container,
+    .Getränkebild-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .weihnachtsbild,
+    .Getränkebild {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    #text p,
+    #Gtext p {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        font-size: 0.9em;
+    }
+
+    main {
+        font-size: 0.9em;
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    .weihnachtsbild-container,
+    .Getränkebild-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .weihnachtsbild,
+    .Getränkebild {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    #text p,
+    #Gtext p {
+        width: 100%;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    footer h3 {
+        font-size: 0.8em;
+    }
+}

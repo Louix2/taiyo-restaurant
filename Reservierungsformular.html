@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taiyō - Reservierungen</title>
+    <link rel="stylesheet" href="CSS/Style.Css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('reservation-form');
+            const successMessage = document.getElementById('success-message');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const date = form.date.value.trim();
+                const name = form.name.value.trim();
+                const email = form.email.value.trim();
+                const persons = form.persons.value.trim();
+
+                if (!date || !name || !email || !persons) {
+                    alert('Bitte füllen Sie alle Felder aus.');
+                    return;
+                }
+
+                const table = Math.floor(Math.random() * 10) + 1;
+                successMessage.textContent = `Reservierung erfolgreich! Tisch ${table} am ${date} für ${persons} Person(en) wurde reserviert.`;
+                successMessage.style.display = 'block';
+
+                form.reset();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Taiyō</h1>
+            <img src="IMG/Logo.webp" alt="Taiyō Logo" class="header-logo">
+        </header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Speisekarte.html">Speisekarte</a>
+            <a href="Getraenkekarte.html">Getränkekarte</a>
+            <a href="Event.html">Events</a>
+            <a href="Spezials.html">Spezials</a>
+            <a href="Reservierungsformular.html" class="active">Reservierung</a>
+        </nav>
+    <main>
+        <section>
+            <h2>Reservierungen</h2>
+            <p>Wählen Sie ein Datum und geben Sie Ihre Informationen ein, um eine Reservierung vorzunehmen.</p>
+        </section>
+
+        <form id="reservation-form">
+            <div class="form-group">
+                <label for="date">Datum:</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="persons">Anzahl der Personen:</label>
+                <input type="number" id="persons" name="persons" min="1" required>
+            </div>
+
+            <button type="submit">Reservieren</button>
+        </form>
+
+        <p id="success-message"></p>
+        <p>Für Besondere Anfragen etc. wenden sie sich an uns per Email oder rufen sie uns gerne an. Kontaktdaten finden sie im Impressum. </p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Taiyō Restaurant.</p>
+        <h3><a href="Impressum.html">Impressum</a></h3>
+    </footer>
+</body>
+</html>
